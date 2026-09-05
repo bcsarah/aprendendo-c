@@ -1,5 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 
+#define println(...) printf(__VA_ARGS__), putchar('\n')
+
+// Funções Matemáticas
 int somar(int x, int y) {
   return x + y;
 };
@@ -28,24 +32,25 @@ int resto(int x, int y) {
 int main() {
   int x, y;
 
-  /* Calculadora */
+  // Calculadora
+  system("cls");
   printf("===== [ CALCULADORA ] =====\n\n");
 
-  /* Scan */
+  // Scan
   printf("Digite o 1° número: ");
-  scanf("%u", &x);
+  scanf("%d", &x);
 
   printf("Digite o 2° número: ");
-  scanf("%u", &y);
+  scanf("%d", &y);
 
-  /* Mostrar resultados */
-  printf("\n%u + %u = %u", x, y, somar(x, y));
-  printf("\n%u - %u = %u", x, y, diminuir(x, y));
-  printf("\n%u * %u = %u", x, y, multiplicar(x, y));
-  printf("\n%u / %u = %u", x, y, dividir(x, y));
+  // Mostrar resultados
+  println("\n%d + %d = %d", x, y, somar(x, y));
+  println("%d - %d = %d", x, y, diminuir(x, y));
+  println("%d * %d = %d", x, y, multiplicar(x, y));
+  println("%d / %d = %d", x, y, dividir(x, y));
 
-  printf("\n%u ^ %u = %u", x, x, aoquadrado(x));
-  printf("\n%u ^ %u = %u", y, y, aoquadrado(y));
-  printf("\n%u %% %u = %u", x, y, resto(x, y));
-  printf("\n%u %% %u = %u", y, x, resto(y, y));
+  println("%d ^ %d = %d", x, x, aoquadrado(x));
+  println("%d ^ %d = %d", y, y, aoquadrado(y));
+  println("%d %% %d = %d", x, y, resto(x, y));
+  println("%d %% %d = %d", y, x, resto(y, y));
 }

@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
 
   // checa a quantidade de argumentos
   if (argc > 3 || argc == 1 || argc == 2) {
-    println("use: calc.exe <x> <y>");
+    println("ERROR: ccalc <x> <y>");
     return 1;
   }
 

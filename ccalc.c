@@ -29,21 +29,21 @@ int resto(int x, int y) {
 };
 
 /* ===== MAIN ===== */
-int main() {
-  int x, y;
+int main(int argc, char *argv[]) {
 
-  // Calculadora
-  system("cls");
-  println("== calc ==");
+  // checa a quantidade de argumentos
+  if (argc > 3 || argc == 1 || argc == 2) {
+    println("use: calc.exe <x> <y>");
+    return 1;
+  }
 
-  // Scan
-  printf("x: ");
-  scanf("%d", &x);
+  // atoi converte string p/ int
+  int x = atoi(argv[1]);
+  int y = atoi(argv[2]);
 
-  printf("y: ");
-  scanf("%d", &y);
+  // output
+  println("== calc results ==");
 
-  // Mostrar resultados
   println("\n%d + %d = %d", x, y, somar(x, y));
   println("%d - %d = %d", x, y, diminuir(x, y));
   println("%d * %d = %d", x, y, multiplicar(x, y));
@@ -52,5 +52,5 @@ int main() {
   println("\n%d ^ %d = %d", x, x, aoquadrado(x));
   println("%d ^ %d = %d", y, y, aoquadrado(y));
   println("%d %% %d = %d", x, y, resto(x, y));
-  println("%d %% %d = %d", y, x, resto(y, y));
+  println("%d %% %d = %d", y, x, resto(y, x));
 }

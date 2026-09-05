@@ -34,13 +34,13 @@ int main() {
 
   // Calculadora
   system("cls");
-  printf("===== [ CALCULADORA ] =====\n\n");
+  println("== calc ==");
 
   // Scan
-  printf("Digite o 1° número: ");
+  printf("x: ");
   scanf("%d", &x);
 
-  printf("Digite o 2° número: ");
+  printf("y: ");
   scanf("%d", &y);
 
   // Mostrar resultados
@@ -49,7 +49,7 @@ int main() {
   println("%d * %d = %d", x, y, multiplicar(x, y));
   println("%d / %d = %d", x, y, dividir(x, y));
 
-  println("%d ^ %d = %d", x, x, aoquadrado(x));
+  println("\n%d ^ %d = %d", x, x, aoquadrado(x));
   println("%d ^ %d = %d", y, y, aoquadrado(y));
   println("%d %% %d = %d", x, y, resto(x, y));
   println("%d %% %d = %d", y, x, resto(y, y));

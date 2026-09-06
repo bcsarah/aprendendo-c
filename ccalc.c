@@ -26,10 +26,9 @@ float aoquadrado(float x) {
 
 /* ===== MAIN ===== */
 int main(int argc, char *argv[]) {
-
   // checa a quantidade de argumentos
-  if (argc != 3) {
-    println("ERROR: ccalc <x> <y>");
+  if (argc != 4) { // 0 = sem argumentos
+    println("ERROR: ccalc <x> <op> <y>");
     return 1;
   }
 
